@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "FlixNext",
+    "slug": "flixnext-android",
+    "version": "0.1.0",
+    "description": "Filmes e séries da FlixNext no seu smartphone.",
+    "scheme": "flixnext",
+    "platforms": ["android"],
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#141414",
+    "android": {
+      "package": "br.com.flixnext.android",
+      "versionCode": 1,
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": true,
+      "softwareKeyboardLayoutMode": "resize",
+      "blockedPermissions": ["android.permission.RECORD_AUDIO"],
+      "adaptiveIcon": {
+        "backgroundColor": "#141414"
+      }
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#141414",
+      "barStyle": "light-content",
+      "translucent": false
+    },
+    "androidNavigationBar": {
+      "backgroundColor": "#141414",
+      "barStyle": "light-content"
+    },
+    "splash": {
+      "backgroundColor": "#141414",
+      "resizeMode": "contain"
+    },
+    "plugins": [
+      "expo-av",
+      "expo-secure-store",
+      "expo-font",
+      "expo-video",
+      "./plugins/withExpoVideoSubtitleStyle"
+    ],
+    "extra": {
+      "supportUrl": "https://flixnext.com.br/me"
+    }
+  }
+}
