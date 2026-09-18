@@ -23,6 +23,12 @@ backendClient.interceptors.request.use(async (config) => {
   return config;
 });
 
+contentClient.interceptors.request.use(async (config) => {
+  const token = await sessionStorage.getToken();
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
+
 backendClient.interceptors.response.use(
   (response) => response,
   async (error: AxiosError) => {
